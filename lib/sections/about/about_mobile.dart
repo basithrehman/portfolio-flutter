@@ -68,21 +68,35 @@ class AboutMobile extends StatelessWidget {
             ),
             textAlign: TextAlign.center
           ),
+          SizedBox(
+            height: height * 0.02,
+          ),
           OutlinedButton(
-              child: Text("View Resume"),
-              onPressed: () {
+              onPressed: () {},
+              style: OutlinedButton.styleFrom(
+                side: const BorderSide(style: BorderStyle.none,),
+              ),
+              child: TextButton.icon(
+                onPressed: () {
                 kIsWeb
                     ? html.window.open(StaticUtils.resume, "pdf")
                     : openURL(StaticUtils.resume);
-              },
-              style: ButtonStyle(
-              backgroundColor:  MaterialStateProperty.all(const Color.fromARGB(221, 110, 243, 165)),
-              foregroundColor: MaterialStateProperty.all(Colors.white),
-              textStyle: MaterialStateProperty.all(
-              const TextStyle(fontSize: 14),
-            ),
-            
-          )),
+                },
+                icon: const Icon(
+                Icons.file_copy,
+                size: 24.0,
+                ),
+                label: const Text('View Resume'),
+                style: ButtonStyle(
+                  elevation: MaterialStateProperty.all(10),
+                  padding: MaterialStateProperty.all(const EdgeInsets.symmetric(vertical: 12, horizontal: 18)),
+                  backgroundColor:  MaterialStateProperty.all(const Color.fromARGB(221, 110, 243, 165)),
+                  foregroundColor: MaterialStateProperty.all(Colors.white),
+                  textStyle: MaterialStateProperty.all(
+                  const TextStyle(fontSize: 18),
+                  ),
+                )
+              )),
           Space.y!,
           Divider(
             color: Colors.grey[800],
