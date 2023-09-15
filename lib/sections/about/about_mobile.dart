@@ -64,7 +64,7 @@ class AboutMobile extends StatelessWidget {
             style: AppText.l1!.copyWith(
               height: 2,
               letterSpacing: 1.1,
-              fontFamily: 'Agustina',
+              fontFamily: 'Poppins',
             ),
             textAlign: TextAlign.center
           ),

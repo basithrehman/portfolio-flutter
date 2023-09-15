@@ -11,17 +11,21 @@ class NavBarLogo extends StatelessWidget {
       children: [
         Text(
           "< ",
-          style: AppText.b1,
+          style: AppText.b2b!.copyWith(
+            fontFamily: 'Montserrat',
+          )
         ),
         Text(
-          "Hamza",
-          style: AppText.b1b!.copyWith(
-            fontFamily: 'Agustina',
+          "A Flutter app",
+          style: AppText.b2b!.copyWith(
+            fontFamily: 'Poppins',
           ),
         ),
         Text(
           MediaQuery.of(context).size.width >= 1000 ? " />\t\t" : " />",
-          style: AppText.b1,
+          style: AppText.b2b!.copyWith(
+            fontFamily: 'Montserrat',
+          )
         )
       ],
     );
